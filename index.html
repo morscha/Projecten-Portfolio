@@ -21,50 +21,61 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             border-radius: 8px;
         }
+        
+        /* AANGEPAST: Header lay-out (Flexbox) */
         header {
-            text-align: center;
+            display: flex;              /* Zorgt dat foto en tekst naast elkaar staan */
+            align-items: center;        /* Centreert verticaal */
+            gap: 30px;                  /* Ruimte tussen foto en tekst */
             margin-bottom: 40px;
             border-bottom: 2px solid #0078d4;
             padding-bottom: 30px;
         }
-        
-        /* NIEUW: Stijl voor de profielfoto */
+
+        /* AANGEPAST: Stijl voor de profielfoto */
         .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Maakt de foto rond */
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
             object-fit: cover;
             border: 4px solid #f4f7f6;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            margin-bottom: 15px;
+            flex-shrink: 0;             /* Zorgt dat de foto niet geplet wordt */
+        }
+
+        /* Container voor de tekst rechts van de foto */
+        .header-content {
+            flex-grow: 1;
         }
 
         h1 {
             color: #2c3e50;
             margin-bottom: 5px;
             margin-top: 0;
+            line-height: 1.2;
         }
         .subtitle {
             font-size: 1.2em;
             color: #7f8c8d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        /* NIEUW: Stijl voor de download knop */
+        /* Stijl voor de download knop */
         .btn-download {
             display: inline-block;
             background-color: #0078d4;
             color: white;
             text-decoration: none;
-            padding: 10px 25px;
-            border-radius: 25px; /* Pil-vorm */
+            padding: 8px 20px;
+            border-radius: 25px;
             font-weight: 600;
+            font-size: 0.95em;
             transition: background-color 0.3s, transform 0.2s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .btn-download:hover {
             background-color: #005a9e;
-            transform: translateY(-2px); /* Klein hupje omhoog bij muis erover */
+            transform: translateY(-2px);
         }
         
         /* Tabel stijlen */
@@ -153,7 +164,12 @@
             margin-bottom: 3px;
         }
 
+        /* Mobiele weergave aanpassingen */
         @media (max-width: 600px) {
+            header {
+                flex-direction: column; /* Op mobiel weer onder elkaar */
+                text-align: center;
+            }
             th { display: none; }
             td { display: block; width: 100%; box-sizing: border-box; }
             tr { margin-bottom: 20px; display: block; border: 1px solid #ddd; padding: 10px;}
@@ -164,12 +180,14 @@
 
 <div class="container">
     <header>
-        <img src="foto.png" alt="Morscha Muller" class="profile-photo" onerror="this.style.display='none'">
+        <img src="foto.jpg" alt="Morscha Muller" class="profile-photo" onerror="this.style.display='none'">
         
-        <h1>Projectportfolio - Morscha Muller</h1>
-        <div class="subtitle">Overzicht uitgevoerde projecten & ervaring</div>
-
-        <a href="cv.pdf" class="btn-download" target="_blank">📄 Download CV</a>
+        <div class="header-content">
+            <h1>Projectportfolio - Morscha Muller</h1>
+            <div class="subtitle">Overzicht uitgevoerde projecten & ervaring</div>
+            
+            <a href="cv.pdf" class="btn-download" target="_blank">📄 Download CV</a>
+        </div>
     </header>
 
     <table>
