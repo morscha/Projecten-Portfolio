@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectportfolio - Morscha Muller</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+        th {
+            background-color: #0078d4;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #fcfcfc;
+        }
+        /* Aangepast: Kolom is breder geworden nu logo hierin staat */
+        .company-col {
+            width: 35%;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        /* Stijl voor de logo afbeeldingen - Aangepast voor positie onder tekst */
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            display: block;
+            margin-top: 10px; /* Ruimte tussen plaatsnaam en logo */
+            border-radius: 4px;
+        }
+        /* Placeholder voor als er geen logo is */
+        .no-logo {
+            width: 48px;
+            height: 48px;
+            background-color: #eee;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px; /* Ruimte tussen plaatsnaam en logo */
+        }
+        /* Aangepast: Beschrijving krijgt de rest van de ruimte */
+        .desc-col {
+            width: 65%;
+        }
+        .location {
+            display: block;
+            font-size: 0.85em;
+            color: #888;
+            font-weight: normal;
+            margin-top: 4px;
+        }
+        
+        /* Uitklap stijl */
+        details {
+            margin-top: 10px;
+            background-color: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+        summary {
+            cursor: pointer;
+            color: #0078d4;
+            font-weight: 600;
+            font-size: 0.85em;
+            outline: none;
+            user-select: none;
+        }
+        summary:hover {
+            text-decoration: underline;
+        }
+        .project-list {
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 0.9em;
+            color: #555;
+            list-style-type: square;
+        }
+        .project-list li {
+            margin-bottom: 3px;
+        }
+
+        @media (max-width: 600px) {
+            th { display: none; }
+            td { display: block; width: 100%; box-sizing: border-box; }
+            tr { margin-bottom: 20px; display: block; border: 1px solid #ddd; padding: 10px;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Projectportfolio - Morscha Muller</h1>
+        <div class="subtitle">Overzicht uitgevoerde projecten & ervaring</div>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Bedrijf</th>
+                <th>Projectomschrijving</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td class="company-col">
+                    24Rosa
+                    <span class="location">Sittard</span>
+                    <img src="https://24rosa.nl/wp-content/uploads/2023/11/Rosa-Nieuw-Logo-Klein.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Service & Support Woningcorporaties</strong><br>
+                    Afhandeling van servicetickets en technische meldingen voor diverse partijen zoals De Variabele en De Noabers.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>DeVariabele Oosterpoort ServiceTicket</li>
+                            <li>DeVariabele Site ServiceTicket</li>
+                            <li>DeVariabele Wonion ServiceTicket</li>
+                            <li>DeVariabele Wonion TechnischGereed</li>
+                            <li>De Noabers Site ServiceTicket</li>
+                            <li>De Noabers Wonion ServiceTicket</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Aanbieders.be
+                    <span class="location">België</span>
+                    <img src="https://www.google.com/s2/favicons?domain=aanbieders.be&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Energiecontracten Beheer</strong><br>
+                    Verwerking van contracten voor leveranciers waaronder Elegant, Eneco, Engie en Luminus.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Energiecontracten</li>
+                            <li>Elegant</li>
+                            <li>Eneco</li>
+                            <li>Engie</li>
+                            <li>FrankEnergy</li>
+                            <li>Luminus</li>
+                            <li>Mega</li>
+                            <li>TotalEnergies</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Aegon Bank
+                    <span class="location">Nieuwegein</span>
+                    <img src="https://www.verzekering.nl/wp-content/uploads/2022/06/Aegon-logo-270-x-200.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Financiële Administratie</strong><br>
+                    Verwerken van financiële mutaties en het fiatteren van dossiers.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>FinancieleMutatie</li>
+                            <li>Fiatteren</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Aegon Verzekeringen
+                    <span class="location">Leeuwarden</span>
+                    <img src="https://www.verzekering.nl/wp-content/uploads/2022/06/Aegon-logo-270-x-200.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Inkomensverzekeringen</strong><br>
+                    Beheer van Garantie Inkomen dossiers (vreemd en eigen geld).
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>GarantieInkomenVreemdGeld</li>
+                            <li>GarantieInkomenEigenGeld</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Amdocs / VodafoneZiggo
+                    <span class="location">Maastricht</span>
+                    <img src="https://opticalconnectionsnews.com/wp-content/uploads/2024/10/amdocs-logo.jpg" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Telecom Backoffice & Order Management</strong><br>
+                    Uitgebreid takenpakket: orderinvoer, annuleringen, nummerbehoud en financiële correcties.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>AddDiscount</li>
+                            <li>AddPickedSim</li>
+                            <li>AddPremium</li>
+                            <li>AnnulerenBestelling.CloseWi</li>
+                            <li>BanMerge</li>
+                            <li>CancelGarant</li>
+                            <li>CancelSubFixed</li>
+                            <li>CancelSubscription</li>
+                            <li>CeaseFixed</li>
+                            <li>CeaseFixedUbuy</li>
+                            <li>ChangeCtn</li>
+                            <li>ChangeUserData</li>
+                            <li>CopyInvoice</li>
+                            <li>CreateCharge</li>
+                            <li>DepartureAbroad</li>
+                            <li>DynaError</li>
+                            <li>GGZ.Validatie</li>
+                            <li>Order Entry</li>
+                            <li>HFDelivery</li>
+                            <li>HFocError</li>
+                            <li>HfocFixed</li>
+                            <li>HFV.AxiSwat</li>
+                            <li>HFV.Fixed</li>
+                            <li>J63</li>
+                            <li>KopieContract</li>
+                            <li>LoanPayOff</li>
+                            <li>OneNetFixed.StartProvide</li>
+                            <li>OOW</li>
+                            <li>OutboundComms.CloseCase</li>
+                            <li>PortOut</li>
+                            <li>RegCancelCrm</li>
+                            <li>Statement</li>
+                            <li>SubmitFailure.Fixed</li>
+                            <li>TechnischeSwap</li>
+                            <li>ToestelSplitLoan</li>
+                            <li>TouB2B</li>
+                            <li>TouFixed</li>
+                            <li>TransferOfUser</li>
+                            <li>UAM</li>
+                            <li>UnbarringTelefonie</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Anac Backoffice
+                    <span class="location">Eindhoven</span>
+                    <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFtexVMSsX0kQ/company-logo_200_200/company-logo_200_200/0/1712330244580/anac_backoffice_logo?e=2147483647&v=beta&t=_6b7M8-1pyUrF_ugKqIaY7eFYHXbwJ2-T2QufufKrPc" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Volmacht Verzekeringen</strong><br>
+                    Prolongatie en mutaties van diverse verzekeringen.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Prolongatie volmacht verzekeringen:</li>
+                            <li>Aanpassen contractduur</li>
+                            <li>Aanvullen relatie</li>
+                            <li>Verzekeringen: Auto, Inboedel, Opstal, Rechtsbijstand, Reis</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Anker Verzekeringen
+                    <span class="location">Groningen</span>
+                    <img src="https://www.verzekering.nl/wp-content/uploads/2022/06/Anker-insurance-logo-270-x-200.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Volmacht Verzekeringen</strong><br>
+                    Beheer verzekeringsportefeuille.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Prolongatie volmacht verzekeringen</li>
+                            <li>Verzekeringen: Auto, Inboedel, Opstal, Rechtsbijstand, Reis</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Cannock Chase
+                    <span class="location">Druten</span>
+                    <img src="https://www.google.com/s2/favicons?domain=cannockchase.nl&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Credit Management</strong><br>
+                    Debiteur-gestuurd werken en parkeerbeheer.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Debiteur gestuurd werken</li>
+                            <li>Lijst ING</li>
+                            <li>SepParkeren</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    CDS
+                    <span class="location">Harderwijk</span>
+                    <img src="https://verzekeringskaarten.nl/assets/images/cds-verzekeringen/cds-logo21.jpg" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Volmacht Verzekeringen</strong><br>
+                    Prolongatie en administratie schadeverzekeringen.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Prolongatie volmacht verzekeringen</li>
+                            <li>Verzekeringen: Auto, Inboedel, Opstal, Rechtsbijstand, Reis</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    CJIB
+                    <span class="location">Leeuwarden</span>
+                    <img src="https://www.google.com/s2/favicons?domain=cjib.nl&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Administratieve Verwerking</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Zinbestemmen</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Elips Life
+                    <span class="location">Amstelveen</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZNujEiXhQBKpAX4C9Yql3LIpZY--vfc-iJA&s" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Claim- & Relatiebeheer</strong><br>
+                    Verwerking van Affiliate uploads en claim dossiers.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>AffiliateUpload</li>
+                            <li>ClaimCaseCreation</li>
+                            <li>TPA</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Eneco
+                    <span class="location">Rotterdam</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eneco_logo.svg/1280px-Eneco_logo.svg.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Energie Administratie</strong><br>
+                    Verwerking verhuizingen, teruglevering en D2D.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>AfkeurSimpeleMeter</li>
+                            <li>FoutOpgVerhuizing</li>
+                            <li>SRLeveringAanpassen</li>
+                            <li>Teruglevering</li>
+                            <li>VerwerkingD2DVerkopen</li>
+                            <li>WarmteOM</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    EON
+                    <span class="location">Eindhoven</span>
+                    <img src="https://www.google.com/s2/favicons?domain=eon.com&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Facturatie & Data</strong><br>
+                    Facturatiecontroles en stamdata beheer.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Facturatie.EA05</li>
+                            <li>Plausibiliteitscontrole</li>
+                            <li>SBWPStamDataUitval</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Etil
+                    <span class="location">Sittard</span>
+                    <img src="https://twist-it.agency/assets/case/etil-logo.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Dataverzameling</strong><br>
+                    Verzamelen regiodata en UWV-gegevens.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>KVK Regiodata</li>
+                            <li>UWV Dataverzameling</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Gemeente Rotterdam
+                    <span class="location">Rotterdam</span>
+                    <img src="https://www.invitado.nl/uploads/images/cases/rotterdam_logo_nieuw.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Invordering</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Beslaglegging</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    KPN Backoffice
+                    <span class="location">Amsterdam</span>
+                    <img src="https://www.google.com/s2/favicons?domain=kpn.com&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Consumenten & Zakelijk</strong><br>
+                    Orderverwerking, glasvezeluitval en migraties.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>AftersalesKlz</li>
+                            <li>AnalyseStatus</li>
+                            <li>CarrierTypeWijziging</li>
+                            <li>DhzActivatie</li>
+                            <li>BerichtenVerkeerBluepondSnt</li>
+                            <li>ControleCancelBerichten</li>
+                            <li>Digitenne/Opheffingen/Overstapdesk</li>
+                            <li>Rapportage.Forecast.Churn.Tool</li>
+                            <li>SentBcMailToStreamserve</li>
+                            <li>DoorstromersEmail</li>
+                            <li>EmailBounce</li>
+                            <li>ExtraKpnBericht.Kpn100</li>
+                            <li>FunctioneleProductbesturing</li>
+                            <li>GlasvezelUitval</li>
+                            <li>HardwareBestellen</li>
+                            <li>HeosSpijtoptanten</li>
+                            <li>KPN_ING_Overstapservice</li>
+                            <li>Lisa DOPDossier/ RetourBrieven/SmartCard</li>
+                            <li>Modemswap</li>
+                            <li>Need4SpeedL3</li>
+                            <li>PocWoUitval</li>
+                            <li>RegieOpDgs</li>
+                            <li>VersturenBelBrief</li>
+                            <li>VTOSP</li>
+                            <li>Wholesale_GeplandWerk</li>
+                            <li>Wholesale_Offertes</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    KPN Finance
+                    <span class="location">Rotterdam</span>
+                    <img src="https://www.google.com/s2/favicons?domain=kpn.com&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Financial Control</strong><br>
+                    Invoer bestellingen, journaalposten en rapportages.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>BashReports</li>
+                            <li>InvoerBestellingen</li>
+                            <li>JournaalpostenIncidenteel</li>
+                            <li>KPI.Rapportages</li>
+                            <li>MDM.BeheerDataKlanten</li>
+                            <li>MDM.BeheerDataMaterialen</li>
+                            <li>MDM.VVPMaterialen</li>
+                            <li>SAPBPC_DeelnAdmin</li>
+                            <li>SignalerenTrendAnalyse</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    KPN KCD
+                    <span class="location">Amersfoort</span>
+                    <img src="https://www.google.com/s2/favicons?domain=kpn.com&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Klant Contact Diensten</strong><br>
+                    Validatie en uitvalverwerking.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Kcd.Aanmelden</li>
+                            <li>SysteemuitvalBoss</li>
+                            <li>Uitvalmailer</li>
+                            <li>Validatie</li>
+                            <li>VASToevoegen</li>
+                            <li>WijzigingIBTaken</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    MSF Finance
+                    <span class="location"></span>
+                    <div class="no-logo">MSF</div>
+                </td>
+                <td class="desc-col">
+                    <strong>Finance & Risk</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>MFS Relatie</li>
+                            <li>Credit check</li>
+                            <li>MFS Finance</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Nationale Nederlanden
+                    <span class="location">Den Haag</span>
+                    <img src="https://www.google.com/s2/favicons?domain=nn.nl&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Polisbeheer Leven & Schade</strong><br>
+                    Beheer levensverzekeringen en Salesforce-werkzaamheden.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>IncompleetBrieven</li>
+                            <li>IWA</li>
+                            <li>AfkoopEuro</li>
+                            <li>Agendas.Indexeren</li>
+                            <li>DirectIngaandePolissen</li>
+                            <li>IVR</li>
+                            <li>Naverrekenen</li>
+                            <li>Nipo</li>
+                            <li>Premiebeheer.Herincasso</li>
+                            <li>RDW</li>
+                            <li>RoyerenVolmacht</li>
+                            <li>Salesforce.Tool</li>
+                            <li>RoyerenZcp</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    PGGM
+                    <span class="location">Zeist</span>
+                    <img src="https://www.pggm.nl/media/x3cnkxmf/pggm-logo-zonder-payof_480x480.jpg?width=700&height=560&quality=70&v=1d60dbc16434b50" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Pensioenadministratie</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>BVW_Taken</li>
+                            <li>Excasso</li>
+                            <li>GenererenbriefPV</li>
+                            <li>MigratieTandtechniek</li>
+                            <li>ToekenningOp</li>
+                            <li>UitvalSUAG</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    SNS Bank
+                    <span class="location">Utrecht</span>
+                    <img src="https://play-lh.googleusercontent.com/rwWx17Nz5VYWgtyCeamhdl29xEK58YJfJ464LgNjCo_hxJ1mdK5Wy3IBItidIfkgv2w" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Bancaire Services & CDD</strong><br>
+                    Klantonderzoek (CDD), opheffen rekeningen en overstapservice.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>ARC-Boeken</li>
+                            <li>DIS</li>
+                            <li>KlantonderzoekCDD</li>
+                            <li>KopieAfschrift</li>
+                            <li>OpheffenRekening</li>
+                            <li>OverstapserviceIN</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Tele2
+                    <span class="location">Hoofddorp</span>
+                    <img src="https://www.tele2.nl/general/media/images/facebook/og-t2-image.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Order Management</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Web order</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Telfort
+                    <span class="location">Amsterdam</span>
+                    <img src="https://goedkoopste-telefoonabonnement.nl/wp-content/uploads/2019/04/Telfort-KPN.png" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Incident Management</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>BewakenCOBSTickets</li>
+                            <li>Cobs.AanmakenTicket</li>
+                            <li>ITNS.Afmeldingen</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Van Lanschot
+                    <span class="location">'s-Hertogenbosch</span>
+                    <img src="https://www.securitymanagement.nl/wp-content/uploads/2016/10/Van-Lanschot.jpg" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Bankwezen & Data</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Verrijken polisgegevens</li>
+                            <li>Vervallen Relatie Rekening</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Vivat
+                    <span class="location">Alkmaar</span>
+                    <img src="https://image.parool.nl/150088143/feature-crop/1200/675/de-verkoop-van-de-genationaliseerde-verzekeraar-vivat-voorheen" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Levensverzekeringen Mutaties</strong><br>
+                    Verwerking life-events, adreswijzigingen en IBAN-beheer.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Adreswijziging</li>
+                            <li>Echtscheidingen</li>
+                            <li>VereveningLt</li>
+                            <li>IBAN Beheer</li>
+                            <li>OmzettingenBeoordelen</li>
+                            <li>WaardeOverdracht_Lifetime</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Vodafone
+                    <span class="location">Maastricht</span>
+                    <img src="https://www.google.com/s2/favicons?domain=vodafone.nl&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Mobiele Services</strong><br>
+                    Nummerbehoud, Sim-activatie en annuleringen.
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>AmendenNummerbehoud</li>
+                            <li>CrediterenEindafrekening</li>
+                            <li>GarantFormulieren</li>
+                            <li>HardcopyAnnuleringen</li>
+                            <li>OnlineAnnuleren</li>
+                            <li>SimActivation</li>
+                            <li>WijzigenRekeningnummer</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Wegener
+                    <span class="location">Apeldoorn</span>
+                    <img src="https://www.google.com/s2/favicons?domain=dpgmedia.nl&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Media & Advertenties</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>CampagnePlannerOrders</li>
+                            <li>Familieberichten</li>
+                            <li>PvaOrders</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="company-col">
+                    Zwitserleven
+                    <span class="location">Amstelveen</span>
+                    <img src="https://www.google.com/s2/favicons?domain=zwitserleven.nl&sz=128" alt="Logo" class="logo-img">
+                </td>
+                <td class="desc-col">
+                    <strong>Pensioenen</strong>
+                    <details>
+                        <summary>Bekijk alle projecten ▾</summary>
+                        <ul class="project-list">
+                            <li>Pensioenen</li>
+                        </ul>
+                    </details>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
