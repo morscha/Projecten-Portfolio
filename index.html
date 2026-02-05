@@ -25,16 +25,49 @@
             text-align: center;
             margin-bottom: 40px;
             border-bottom: 2px solid #0078d4;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
         }
+        
+        /* NIEUW: Stijl voor de profielfoto */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Maakt de foto rond */
+            object-fit: cover;
+            border: 4px solid #f4f7f6;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+        }
+
         h1 {
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            margin-top: 0;
         }
         .subtitle {
             font-size: 1.2em;
             color: #7f8c8d;
+            margin-bottom: 20px;
         }
+
+        /* NIEUW: Stijl voor de download knop */
+        .btn-download {
+            display: inline-block;
+            background-color: #0078d4;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 25px; /* Pil-vorm */
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .btn-download:hover {
+            background-color: #005a9e;
+            transform: translateY(-2px); /* Klein hupje omhoog bij muis erover */
+        }
+        
+        /* Tabel stijlen */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -54,22 +87,19 @@
         tr:hover {
             background-color: #fcfcfc;
         }
-        /* Aangepast: Kolom is breder geworden nu logo hierin staat */
         .company-col {
             width: 35%;
             font-weight: bold;
             color: #2c3e50;
         }
-        /* Stijl voor de logo afbeeldingen - Aangepast voor positie onder tekst */
         .logo-img {
             width: 48px;
             height: 48px;
             object-fit: contain;
             display: block;
-            margin-top: 10px; /* Ruimte tussen plaatsnaam en logo */
+            margin-top: 10px;
             border-radius: 4px;
         }
-        /* Placeholder voor als er geen logo is */
         .no-logo {
             width: 48px;
             height: 48px;
@@ -81,9 +111,8 @@
             border-radius: 50%;
             font-size: 20px;
             font-weight: bold;
-            margin-top: 10px; /* Ruimte tussen plaatsnaam en logo */
+            margin-top: 10px;
         }
-        /* Aangepast: Beschrijving krijgt de rest van de ruimte */
         .desc-col {
             width: 65%;
         }
@@ -95,7 +124,6 @@
             margin-top: 4px;
         }
         
-        /* Uitklap stijl */
         details {
             margin-top: 10px;
             background-color: #f8f9fa;
@@ -136,8 +164,12 @@
 
 <div class="container">
     <header>
+        <img src="foto.jpg" alt="Morscha Muller" class="profile-photo" onerror="this.style.display='none'">
+        
         <h1>Projectportfolio - Morscha Muller</h1>
         <div class="subtitle">Overzicht uitgevoerde projecten & ervaring</div>
+
+        <a href="cv.pdf" class="btn-download" target="_blank">📄 Download CV</a>
     </header>
 
     <table>
