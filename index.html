@@ -22,18 +22,17 @@
             border-radius: 8px;
         }
         
-        /* HEADER STIJL - Flexbox zorgt dat ze naast elkaar staan */
+        /* HEADER STIJL */
         header {
             display: flex;
-            align-items: center; /* Verticaal centreren */
+            align-items: flex-start; /* Uitlijnen bovenkant ivm extra tekst */
             gap: 30px;
             margin-bottom: 40px;
             border-bottom: 2px solid #0078d4;
             padding-bottom: 30px;
-            text-align: left; /* Tekst links uitlijnen */
+            text-align: left;
         }
 
-        /* Profielfoto groot (desktop) */
         .profile-photo {
             width: 140px;
             height: 140px;
@@ -41,7 +40,7 @@
             object-fit: cover;
             border: 4px solid #f4f7f6;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            flex-shrink: 0; /* Voorkomt dat foto geplet wordt */
+            flex-shrink: 0;
         }
 
         .header-content {
@@ -57,7 +56,31 @@
         .subtitle {
             font-size: 1.2em;
             color: #7f8c8d;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* NIEUW: Stijl voor de partners/bedrijven tekst en logo's */
+        .partner-info {
             margin-bottom: 15px;
+            font-size: 0.95em;
+            color: #555;
+        }
+        .partner-logos {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .partner-logos img {
+            height: 32px; /* Hoogte van de logo's */
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(20%); /* Iets rustiger beeld, haal weg indien gewenst */
+            transition: filter 0.3s;
+        }
+        .partner-logos img:hover {
+            filter: grayscale(0%);
         }
 
         /* Download knop */
@@ -166,29 +189,33 @@
 
         /* MOBIELE AANPASSINGEN */
         @media (max-width: 600px) {
-            /* Hier zorgen we dat de foto links blijft, maar kleiner wordt */
             header {
-                flex-direction: row; /* Blijft naast elkaar */
-                gap: 15px; /* Minder ruimte tussen foto en tekst */
-                align-items: flex-start; /* Uitlijnen aan de bovenkant */
+                flex-direction: row;
+                gap: 15px;
+                align-items: flex-start;
             }
             .profile-photo {
-                width: 80px;  /* Kleinere foto op mobiel */
+                width: 80px;
                 height: 80px;
                 border-width: 2px;
             }
             h1 {
-                font-size: 1.4em; /* Iets kleinere titel */
+                font-size: 1.4em;
             }
             .subtitle {
                 font-size: 0.95em;
             }
+            
+            /* Logo's op mobiel iets kleiner */
+            .partner-logos img {
+                height: 24px;
+            }
+
             .btn-download {
                 padding: 6px 15px;
                 font-size: 0.85em;
             }
             
-            /* Tabel aanpassingen voor mobiel */
             th { display: none; }
             td { display: block; width: 100%; box-sizing: border-box; }
             tr { margin-bottom: 20px; display: block; border: 1px solid #ddd; padding: 10px;}
@@ -204,7 +231,15 @@
         <div class="header-content">
             <h1>Projectportfolio - Morscha Muller</h1>
             <div class="subtitle">Overzicht uitgevoerde projecten</div>
-            
+
+            <div class="partner-info">
+                Overzicht uitgevoerde projecten vanuit Bluepond, FLX Solutions en Smartz:
+            </div>
+            <div class="partner-logos">
+                <img src="https://www.google.com/s2/favicons?domain=bluepond.nl&sz=128" alt="Bluepond" title="Bluepond">
+                <img src="https://www.google.com/s2/favicons?domain=flx.solutions&sz=128" alt="FLX Solutions" title="FLX Solutions">
+                <img src="https://www.google.com/s2/favicons?domain=smartz.nl&sz=128" alt="Smartz" title="Smartz">
+            </div>
             <a href="cv.pdf" class="btn-download" target="_blank">📄 Download CV</a>
         </div>
     </header>
