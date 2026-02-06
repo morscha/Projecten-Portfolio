@@ -14,7 +14,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 900px;
+            max-width: 950px; /* Iets breder gemaakt voor de logo's rechts */
             margin: 0 auto;
             background: #fff;
             padding: 30px;
@@ -25,14 +25,16 @@
         /* HEADER STIJL */
         header {
             display: flex;
-            align-items: flex-start; /* Uitlijnen bovenkant ivm extra tekst */
-            gap: 30px;
+            align-items: flex-start; 
+            justify-content: space-between; /* Verdeelt de ruimte tussen foto, tekst en logo's */
+            gap: 25px;
             margin-bottom: 40px;
             border-bottom: 2px solid #0078d4;
             padding-bottom: 30px;
             text-align: left;
         }
 
+        /* 1. LINKERKANT: FOTO */
         .profile-photo {
             width: 140px;
             height: 140px;
@@ -43,6 +45,7 @@
             flex-shrink: 0;
         }
 
+        /* 2. MIDDEN: TEKST */
         .header-content {
             flex-grow: 1;
         }
@@ -59,28 +62,32 @@
             margin-bottom: 10px;
             font-weight: 600;
         }
-
-        /* NIEUW: Stijl voor de partners/bedrijven tekst en logo's */
         .partner-info {
             margin-bottom: 15px;
             font-size: 0.95em;
             color: #555;
+            max-width: 500px; /* Zorgt dat de zin mooi afbreekt indien nodig */
         }
+
+        /* 3. RECHTERKANT: LOGO'S */
         .partner-logos {
             display: flex;
+            flex-direction: column; /* Onder elkaar */
             align-items: center;
             gap: 15px;
-            margin-bottom: 20px;
+            flex-shrink: 0; /* Voorkomt dat deze kolom krimpt */
+            padding-top: 5px;
         }
         .partner-logos img {
-            height: 32px; /* Hoogte van de logo's */
+            height: 35px; /* Ietsje groter voor duidelijkheid */
             width: auto;
             object-fit: contain;
-            filter: grayscale(20%); /* Iets rustiger beeld, haal weg indien gewenst */
-            transition: filter 0.3s;
+            filter: grayscale(10%); 
+            transition: filter 0.3s, transform 0.2s;
         }
         .partner-logos img:hover {
             filter: grayscale(0%);
+            transform: scale(1.05);
         }
 
         /* Download knop */
@@ -95,6 +102,7 @@
             font-size: 0.95em;
             transition: background-color 0.3s, transform 0.2s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin-top: 5px;
         }
         .btn-download:hover {
             background-color: #005a9e;
@@ -188,34 +196,34 @@
         }
 
         /* MOBIELE AANPASSINGEN */
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             header {
-                flex-direction: row;
-                gap: 15px;
-                align-items: flex-start;
+                flex-wrap: wrap; /* Zorgt dat onderdelen naar volgende regel gaan */
+                gap: 20px;
+            }
+            .header-content {
+                order: 2; /* Tekst op mobiel als tweede */
+                width: 60%; /* Ruimte naast de foto */
             }
             .profile-photo {
-                width: 80px;
+                order: 1; /* Foto eerst */
+                width: 80px; 
                 height: 80px;
-                border-width: 2px;
             }
-            h1 {
-                font-size: 1.4em;
-            }
-            .subtitle {
-                font-size: 0.95em;
+            .partner-logos {
+                order: 3; /* Logo's onderaan de header */
+                flex-direction: row; /* Naast elkaar op mobiel */
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 10px;
+                border-top: 1px dashed #ddd; /* Scheidingslijntje */
+                padding-top: 15px;
             }
             
-            /* Logo's op mobiel iets kleiner */
-            .partner-logos img {
-                height: 24px;
-            }
+            h1 { font-size: 1.4em; }
+            .subtitle { font-size: 0.95em; }
+            .partner-info { font-size: 0.9em; }
 
-            .btn-download {
-                padding: 6px 15px;
-                font-size: 0.85em;
-            }
-            
             th { display: none; }
             td { display: block; width: 100%; box-sizing: border-box; }
             tr { margin-bottom: 20px; display: block; border: 1px solid #ddd; padding: 10px;}
@@ -230,17 +238,19 @@
         
         <div class="header-content">
             <h1>Projectportfolio - Morscha Muller</h1>
-            <div class="subtitle">Overzicht uitgevoerde projecten in opdracht van Bluepond, FLX Solutions en Smartz Services & Solutions</div>
-
+            <div class="subtitle">Overzicht uitgevoerde projecten</div>
+            
             <div class="partner-info">
-                Overzicht uitgevoerde projecten in opdracht van Bluepond, FLX Solutions en Smartz Services & Solutions
+                Overzicht uitgevoerde projecten in opdracht van Bluepond, FLX Solutions en Smartz
             </div>
-            <div class="partner-logos">
-                <img src="https://www.google.com/s2/favicons?domain=bluepond.nl&sz=128" alt="Bluepond" title="Bluepond">
-                <img src="https://www.google.com/s2/favicons?domain=flx.solutions&sz=128" alt="FLX Solutions" title="FLX Solutions">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKqZR5ygph6M7ZVCKEaAj1ZbBi19Gx-1aNXw&s">
-            </div>
+            
             <a href="cv.pdf" class="btn-download" target="_blank">📄 Download CV</a>
+        </div>
+
+        <div class="partner-logos">
+            <img src="https://www.google.com/s2/favicons?domain=bluepond.nl&sz=128" alt="Bluepond" title="Bluepond">
+            <img src="https://www.google.com/s2/favicons?domain=flx.solutions&sz=128" alt="FLX Solutions" title="FLX Solutions">
+            <img src="https://www.google.com/s2/favicons?domain=smartz.nl&sz=128" alt="Smartz" title="Smartz">
         </div>
     </header>
 
