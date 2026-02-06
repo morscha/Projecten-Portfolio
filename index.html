@@ -14,7 +14,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 950px; /* Iets breder gemaakt voor de logo's rechts */
+            max-width: 950px;
             margin: 0 auto;
             background: #fff;
             padding: 30px;
@@ -26,7 +26,7 @@
         header {
             display: flex;
             align-items: flex-start; 
-            justify-content: space-between; /* Verdeelt de ruimte tussen foto, tekst en logo's */
+            justify-content: space-between;
             gap: 25px;
             margin-bottom: 40px;
             border-bottom: 2px solid #0078d4;
@@ -66,20 +66,21 @@
             margin-bottom: 15px;
             font-size: 0.95em;
             color: #555;
-            max-width: 500px; /* Zorgt dat de zin mooi afbreekt indien nodig */
+            max-width: 500px;
         }
 
-        /* 3. RECHTERKANT: LOGO'S */
+        /* 3. RECHTERKANT: LOGO'S (AANGEPAST) */
         .partner-logos {
             display: flex;
             flex-direction: column; /* Onder elkaar */
             align-items: center;
             gap: 15px;
-            flex-shrink: 0; /* Voorkomt dat deze kolom krimpt */
+            flex-shrink: 0;
             padding-top: 5px;
         }
         .partner-logos img {
-            height: 35px; /* Ietsje groter voor duidelijkheid */
+            /* AANGEPAST: Hoogte vergroot van 35px naar 55px (ca. 50% groter) */
+            height: 55px; 
             width: auto;
             object-fit: contain;
             filter: grayscale(10%); 
@@ -198,25 +199,25 @@
         /* MOBIELE AANPASSINGEN */
         @media (max-width: 700px) {
             header {
-                flex-wrap: wrap; /* Zorgt dat onderdelen naar volgende regel gaan */
+                flex-wrap: wrap;
                 gap: 20px;
             }
             .header-content {
-                order: 2; /* Tekst op mobiel als tweede */
-                width: 60%; /* Ruimte naast de foto */
+                order: 2;
+                width: 60%;
             }
             .profile-photo {
-                order: 1; /* Foto eerst */
+                order: 1;
                 width: 80px; 
                 height: 80px;
             }
             .partner-logos {
-                order: 3; /* Logo's onderaan de header */
-                flex-direction: row; /* Naast elkaar op mobiel */
+                order: 3;
+                flex-direction: row;
                 width: 100%;
                 justify-content: flex-start;
                 margin-top: 10px;
-                border-top: 1px dashed #ddd; /* Scheidingslijntje */
+                border-top: 1px dashed #ddd;
                 padding-top: 15px;
             }
             
@@ -238,10 +239,10 @@
         
         <div class="header-content">
             <h1>Projectportfolio - Morscha Muller</h1>
-            <div class="subtitle">Overzicht uitgevoerde projecten</div>
+            <div class="subtitle">Overzicht uitgevoerde RPA/Optimalisatie projecten</div>
             
             <div class="partner-info">
-                Overzicht uitgevoerde projecten in opdracht van Bluepond, FLX Solutions en Smartz
+                Overzicht uitgevoerde projecten vanuit Bluepond, FLX Solutions en Smartz.
             </div>
             
             <a href="cv.pdf" class="btn-download" target="_blank">📄 Download CV</a>
